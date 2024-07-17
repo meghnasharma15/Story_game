@@ -1,0 +1,136 @@
+{
+    "start": {
+        "description": "You find yourself in a dark forest. There are two paths in front of you.",
+        "choices": {
+            "1": {"text": "Take the left path", "next": "left_path"},
+            "2": {"text": "Take the right path", "next": "right_path"}
+        },
+        "image": "forest.png"
+    },
+    "left_path": {
+        "description": "You walk down the left path and encounter a friendly fox.",
+        "choices": {
+            "1": {"text": "Talk to the fox", "next": "fox_conversation"},
+            "2": {"text": "Ignore the fox and keep walking", "next": "keep_walking"}
+        },
+        "image": "fox.png"
+    },
+    "right_path": {
+        "description": "You walk down the right path and find a treasure chest.",
+        "choices": {
+            "1": {"text": "Open the chest", "next": "open_chest", "effects": {"strength": 5}},
+            "2": {"text": "Leave the chest and keep walking", "next": "keep_walking"}
+        },
+        "image": "treasure.jfif"
+    },
+    "fox_conversation": {
+        "description": "The fox gives you a magical item.",
+        "choices": {
+            "1": {"text": "Take the item and thank the fox", "next": "treasure_quest", "effects": {"intelligence": 5}}
+        },
+        "image": "fox.png"
+    },
+    "keep_walking": {
+        "description": "You keep walking and eventually find your way out of the forest.",
+        "choices": {
+            "1": {"text": "Continue", "next": "end"}
+        },
+        "image": "end.jfif"
+    },
+    "open_chest": {
+        "description": "You find a powerful sword in the chest.",
+        "choices": {
+            "1": {"text": "Take the sword", "next": "end", "effects": {"strength": 10}}
+        },
+        "image": "treasure.jfif"
+    },
+    "treasure_quest": {
+        "description": "The magical item from the fox leads you to a map showing a hidden treasure location.",
+        "choices": {
+            "1": {"text": "Follow the map", "next": "hidden_path"}
+        },
+        "image": "map.jfif"
+    },
+    "hidden_path": {
+        "description": "You follow the map and arrive at a mysterious cave entrance.",
+        "choices": {
+            "1": {"text": "Enter the cave", "next": "cave_explore"},
+            "2": {"text": "Examine the surroundings", "next": "examine_surroundings"}
+        },
+        "image": "cave.jfif"
+    },
+    "cave_explore": {
+        "description": "Inside the cave, you discover ancient artifacts and glowing crystals.",
+        "choices": {
+            "1": {"text": "Take an artifact", "next": "take_artifact"},
+            "2": {"text": "Examine the crystals", "next": "examine_crystals"}
+        },
+        "image": "cave.jfif"
+    },
+    "take_artifact": {
+        "description": "You take an artifact with mysterious powers.",
+        "choices": {
+            "1": {"text": "Harness the artifact's power", "next": "artifact_power"},
+            "2": {"text": "Return the artifact", "next": "return_artifact"}
+        },
+        "image": "crystal.jfif"
+    },
+    "artifact_power": {
+        "description": "The artifact grants you control over elements, enhancing your abilities.",
+        "choices": {
+            "1": {"text": "Use the artifact's power", "next": "end", "effects": {"strength": 15}}
+        },
+        "image": "crystal.jfif"
+    },
+    "return_artifact": {
+        "description": "You return the artifact and gain respect for your integrity.",
+        "choices": {
+            "1": {"text": "Continue the journey", "next": "end"}
+        },
+        "image": "crystal.jfif"
+    },
+    "examine_crystals": {
+        "description": "The crystals emit a strange energy, mesmerizing yet dangerous.",
+        "choices": {
+            "1": {"text": "Harness the crystal's energy", "next": "crystal_energy"},
+            "2": {"text": "Leave the crystals", "next": "hidden_path"}
+        },
+        "image": "crystal.jfif"
+    },
+    "crystal_energy": {
+        "description": "You absorb the crystal's energy, gaining heightened awareness and perception.",
+        "choices": {
+            "1": {"text": "Continue with enhanced abilities", "next": "end", "effects": {"intelligence": 10}}
+        },
+        "image": "crystal.jfif"
+    },
+    "examine_surroundings": {
+        "description": "You notice ancient runes and signs leading deeper into the forest.",
+        "choices": {
+            "1": {"text": "Follow the signs", "next": "ancient_runes"},
+            "2": {"text": "Return to the path", "next": "hidden_path"}
+        },
+        "image": "forest.png"
+    },
+    "ancient_runes": {
+        "description": "You decipher the runes and uncover a forgotten ritual site.",
+        "choices": {
+            "1": {"text": "Perform the ritual", "next": "ritual_outcome"},
+            "2": {"text": "Leave the site untouched", "next": "hidden_path"}
+        },
+        "image": "ritual site.jfif"
+    },
+    "ritual_outcome": {
+        "description": "The ritual reveals hidden knowledge, enhancing your mystical understanding.",
+        "choices": {
+            "1": {"text": "Embrace the knowledge", "next": "end", "effects": {"intelligence": 10}}
+        },
+        "image": "ritual site.jfif"
+    },
+    "end": {
+        "description": "The story ends here. Thank you for playing!",
+        "choices": {},
+        "image": "end.jfif"
+    }
+
+}
